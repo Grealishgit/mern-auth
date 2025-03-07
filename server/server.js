@@ -22,6 +22,9 @@ app.use(cors({
     credentials: true // Allow credentials
 }));
 
+//Allow for only specified IP
+//const allowedOrigins = ['http://localhost:5173']
+
 app.get('/', (req, res) => res.send("API WORKING CORRECTLY"));
 app.use('/api/auth', authRouter);
 app.use('/api/user', userRouter);
